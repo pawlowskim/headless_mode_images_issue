@@ -7,20 +7,7 @@ import 'package:flutter_background_geolocation/flutter_background_geolocation.da
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   print("Application started");
-  bg.BackgroundGeolocation.ready(bg.Config(
-      desiredAccuracy: bg.Config.DESIRED_ACCURACY_NAVIGATION,
-      distanceFilter: 10.0,
-      disableLocationAuthorizationAlert: true,
-      disableElasticity: true,
-      disableStopDetection: true,
-      stopOnTerminate: false,
-      startOnBoot: true,
-      preventSuspend: true,
-      stopOnStationary: false,
-      pausesLocationUpdatesAutomatically: false,
-      heartbeatInterval: 60,
-      debug: false));
-  await Future.delayed(const Duration(seconds: 10));
+  await Future.delayed(const Duration(seconds: 3));
   runZoned<Future<void>>(() async {
     runApp(MyApp());
   }, onError: print);
@@ -108,11 +95,26 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'There should be 3 images',
+                'There should be 8 images',
               ),
               Image(image: const AssetImage('assets/house.jpg')),
               Image(image: const AssetImage('assets/tree.jpg')),
               Image(image: const AssetImage('assets/sky.jpeg')),
+              Image(image: const AssetImage('assets/1.jpg')),
+              Image(image: const AssetImage('assets/2.jpg')),
+              Image(image: const AssetImage('assets/3.jpg')),
+              Image(image: const AssetImage('assets/4.jpg')),
+              Image(image: const AssetImage('assets/5.jpeg')),
+              // Image(image: const AssetImage('assets/6.jpeg')),
+              // Image(image: const AssetImage('assets/7.jpg')),
+              // Image(image: const AssetImage('assets/8.jpg')),
+              // Image(image: const AssetImage('assets/9.jpg')),
+              // Image(image: const AssetImage('assets/10.jpg')),
+              // Image(image: const AssetImage('assets/11.jpg')),
+              // Image(image: const AssetImage('assets/12.jpg')),
+              // Image(image: const AssetImage('assets/13.jpg')),
+              // Image(image: const AssetImage('assets/14.jpg')),
+              // Image(image: const AssetImage('assets/15.jpg')),
             ],
           ),
         ),
